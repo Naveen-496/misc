@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/user/Misc/CPP/helloworld/build",
+  "command": "/usr/bin/g++    -Wall -Werror -std=c++17 -g -o CMakeFiles/HelloWorld.dir/src/Main.cpp.o -c /home/user/Misc/CPP/helloworld/src/Main.cpp",
+  "file": "/home/user/Misc/CPP/helloworld/src/Main.cpp"
+}
+]

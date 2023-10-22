@@ -1,0 +1,184 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* css for smooth swiping */
+
+/* .tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-points-x: repeat(100%);
+  scroll-snap-points-x: repeat(100%);
+} */
+
+/* .tab {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  scroll-snap-align: center;
+  transition: background-color 1s ease;
+} */
+
+.tab.border {
+  border-bottom: 2px solid #333;
+}
+
+.tab:hover {
+  background-color: #f2f2f2;
+}
+
+.tab:focus {
+  outline: none;
+}
+
+/* .tabs > div {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-points-x: repeat(100%);
+  scroll-snap-points-x: repeat(100%);
+} */
+/* 
+.tabs > div > div {
+  flex: 1;
+  min-width: 100vw;
+  padding: 20px;
+  scroll-snap-align: center;
+} */
+
+
+.tab {
+  /* ... */
+  transition: border 0.3s ease-in-out; /* add transition property */
+}
+
+/* .border {
+  border-bottom: 3px solid #3f51b5;
+} */
+
+
+/* moibile */
+
+.tabbed-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.tabs-container {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+  touch-action: pan-y;
+}
+
+.tab {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: white;
+  background-color: #0074d9;
+}
+
+.content-container {
+  position: relative;
+  z-index: 0;
+  transition: transform 0.3s;
+  touch-action: pan-y;
+}
+
+.content-container > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content-container > div:nth-child(1) {
+  transform: translateX(0);
+}
+
+.content-container > div:nth-child(2) {
+  transform: translateX(100%);
+}
+
+/* Smooth swiping animation */
+.tabs-container.swipe-left {
+  transform: translateX(-50%);
+}
+
+.tabs-container.swipe-right {
+  transform: translateX(0);
+}
+
+.content-container.swipe-left > div:nth-child(1) {
+  transform: translateX(-50%);
+}
+
+.content-container.swipe-left > div:nth-child(2) {
+  transform: translateX(0);
+}
+
+.content-container.swipe-right > div:nth-child(1) {
+  transform: translateX(0);
+}
+
+.content-container.swipe-right > div:nth-child(2) {
+  transform: translateX(50%);
+}
+

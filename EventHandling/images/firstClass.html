@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script>
+    var passengers = [
+      { name: "Jane Doloop", paid: true, ticket: "coach" },
+      { name: "Dr. Evel", paid: true, ticket: "firstclass" },
+      { name: "Sue Property", paid: false, ticket: "firstclass" },
+      { name: "John Funcall", paid: true, ticket: "coach" },
+    ];
+
+    function processPassengers(passengers, testFunction) {
+      for (var i = 0; i < passengers.length; i++) {
+        if (testFunction(passengers[i])) {
+          return false;
+        }
+        return true;
+      }
+    }
+
+    function testNoFly(passenger) {
+      return passenger.name == "Dr.Evel";
+    }
+
+    function testAllPaid(passenger) {
+      return passenger.paid;
+    }
+
+    var allCanFly = processPassengers(passengers, testNoFly);
+
+    if (!allCanFly) {
+      console.log(
+        "The flight cannot takeoff bcz someone does not belong to this flight"
+      );
+    }
+
+    var allPaid = processPassengers(passengers, testAllPaid);
+
+    if (!allPaid) {
+      console.log(
+        "The flight cannot takeoff bcoz someone haven't paid for the flight"
+      );
+    }
+
+    function createDrinkOrder(passenger) {
+      var orderFunction;
+
+      if (passenger.ticket == "firstclass") {
+        orderFunction = function () {
+          alert("Would you like to order wine or a cocktail?");
+        };
+      } else {
+        orderFunction = function () {
+          alert("your choice is cola or water");
+        };
+      }
+
+      return orderFunction;
+    }
+
+    function serveCustomer(passenger) {
+      var drinkOrderFunction = createDrinkOrder(passenger);
+
+      drinkOrderFunction();
+    }
+
+    function servePassenger(passengers) {
+      for (var i = 0; i < passengers.length; i++) {
+        serveCustomer(passengers[i]);
+      }
+    }
+
+    servePassenger(passengers);
+  </script>
+  <body></body>
+</html>

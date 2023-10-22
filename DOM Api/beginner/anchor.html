@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+
+const phoneNumberRegex = /\+?\d{3}[-\s]?\d{3}[-\s]?\d{4}/g;
+ // matches phone numbers in ###-###-#### or ### ### #### formats
+const originalString = "hoping <span>all are fine</span> pls call us on <a href='hweuguwe'>123-345 1234</a> also our other numbers are +1345 776 5544.";
+
+let match;
+let newString = originalString;
+
+ window.onload = () => {  while ((match = phoneNumberRegex.exec(originalString)) !== null) {
+    const phoneNumber = match[0];
+    const href = phoneNumber.startsWith('+') ? phoneNumber.replace(/[-\s]/g, '') : '+1' + phoneNumber.replace(/[-\s]/g, '');
+    const phoneLink = `<a href="tel:${href}">${phoneNumber}</a>`;
+    newString = newString.replace(phoneNumber, phoneLink);
+  }
+
+console.log(originalString);
+document.body.innerHTML = newString;
+console.log(newString);
+ }
+
+// window.onload = () => {
+    
+//   const originalString = "hoping <span>all are fine</span> pls call us on <a href='hweuguwe'>123-345 1234</a> also our other numbers are 345 776 5544.";
+
+//   const phoneNumberRegex = /(?![^<]*>|[^<>]*<\/a>)(\d{3}[-\s]?\d{3}[-\s]?\d{4})/g;
+
+// let newString = originalString;
+
+// let match;
+// while ((match = phoneNumberRegex.exec(originalString)) !== null) {
+//   const phoneNumber = match[0];
+//   const href = '+1' + phoneNumber.replace(/[-\s]/g, ''); // add +1 at the beginning and remove spaces and dashes
+//   const phoneLink = `<a href="tel:${href}" style="text-decoration:none;">${phoneNumber}</a>`;
+//   newString = newString.replace(phoneNumber, phoneLink);
+// }
+
+// console.log(newString);
+
+// }
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "John Deere",
+    "model": 2015,
+    "color": "Green",
+    "hp": 50
+  },
+  {
+    "name": "Sonalika",
+    "model": 2010,
+    "color": "Dark Blue",
+    "hp": 40
+  },
+  {
+    "name": "Kubota",
+    "model": 2018,
+    "color": "Orange",
+    "hp": 70
+  },
+  {
+    "name": "Mahindra",
+    "model": 2010,
+    "color": "Red",
+    "hp": 55
+  },
+  {
+    "name": "Massey Ferguson",
+    "model": 2012,
+    "color": "Red",
+    "hp": 45
+  },
+  {
+    "name": "John Deere",
+    "model": 2020,
+    "color": "Green",
+    "hp": 80
+  }
+]

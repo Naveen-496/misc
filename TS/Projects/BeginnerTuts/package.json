@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.4.0"
+  },
+  "dependencies": {
+    "vitest": "^0.33.0"
+  },
+  "type": "module",
+  "setupFiles": ["vitest"]
+}

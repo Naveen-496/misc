@@ -1,0 +1,14 @@
+Tree Traversals in Binary Tree
+
+In order to solve any problems in tree DataStructure we need to know about traversal techniques.
+The most important techniques are
+1. Depth First Search
+2. Breadth First Search
+
+ Depth First Search
+ 
+   There are basically three depth first search techniques
+   1. InOrder Traversal (left + root + right)
+       Going to extreme left subtree and then apply the technique
+   2. preOrder Traversal (root + left + right)
+   3. PostOrder Traversal (left + right + root)

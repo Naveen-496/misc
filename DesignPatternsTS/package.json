@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.4.0"
+  },
+  "scripts": {
+    "start": "ts-node src/Observer/observerPattern.ts",
+    "run": "node dist/ObserverJs/observerPattern.js"
+  }
+}

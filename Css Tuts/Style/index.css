@@ -1,0 +1,28 @@
+p {
+  font-size: 64px;
+  color: purple;
+}
+
+.grey {
+  font-size: 15px;
+  color: rgb(233, 211, 12);
+}
+
+.pink {
+  font-size: 20px;
+  color: pink;
+}
+
+h1, h2, h3, h4 {
+  font-style: italic;
+}
+
+.group , .diff {
+
+  color: rgb(74, 5, 139);
+}
+
+p span {
+  text-transform: uppercase;
+  color: rgb(4, 129, 10);
+}

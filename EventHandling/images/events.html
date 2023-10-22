@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .images-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+      }
+      .images-grid img {
+        cursor: pointer;
+        width: 250px;
+        height: 250px;
+      }
+    </style>
+  </head>
+
+  <script>
+    window.onload = init;
+
+    setInterval(ticker, 2000);
+    setInterval(clearInterval, 10000);
+
+    var tick = true;
+
+    function ticker() {
+      if (tick) {
+        console.log("tick");
+      } else {
+        console.log("tock");
+      }
+      tick = !tick;
+    }
+
+    let blur = true;
+
+    function init() {
+      var images = document.getElementsByTagName("img");
+
+      for (var i = 0; i < images.length; i++) {
+        images[i].onmouseover = showImage;
+      }
+    }
+
+    function showImage(eventObj) {
+      var image = eventObj.target;
+
+      var name = image.id;
+      name = name + ".jpg";
+      image.src = name;
+
+      setTimeout(hideImage, 1000, image);
+    }
+
+    function hideImage(image) {
+      
+
+      var name = image.id;
+      name = name + "blur.jpg";
+      image.src = name;
+    }
+
+    function handleTimer() {
+      alert("Hey, you just unlocked the answer! hoo");
+    }
+  </script>
+  <body>
+    <div class="images-grid">
+      <img id="zero" src="zeroblur.jpg" alt="" />
+      <img id="one" src="oneblur.jpg" alt="" />
+      <img id="two" src="twoblur.jpg" alt="" />
+      <img id="three" src="threeblur.jpg" alt="" />
+      <img id="four" src="fourblur.jpg" alt="" />
+      <img id="five" src="fiveblur.jpg" alt="" />
+    </div>
+  </body>
+</html>

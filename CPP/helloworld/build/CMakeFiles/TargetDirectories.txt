@@ -1,0 +1,3 @@
+/home/user/Misc/CPP/helloworld/build/CMakeFiles/HelloWorld.dir
+/home/user/Misc/CPP/helloworld/build/CMakeFiles/edit_cache.dir
+/home/user/Misc/CPP/helloworld/build/CMakeFiles/rebuild_cache.dir

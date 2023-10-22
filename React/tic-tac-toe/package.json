@@ -1,0 +1,31 @@
+{
+  "name": "tic-tac-toe",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "fslightbox-react": "^1.7.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-awesome-lightbox": "^1.8.1",
+    "react-dom": "^18.2.0",
+    "react-image-magnifiers": "^1.4.0",
+    "react-images": "^1.2.0-beta.7",
+    "react-otp-input": "^3.0.2",
+    "react-pinch-zoom": "^0.1.4",
+    "react-quick-pinch-zoom": "^4.6.0",
+    "react-router-dom": "^6.8.2",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0"
+  }
+}

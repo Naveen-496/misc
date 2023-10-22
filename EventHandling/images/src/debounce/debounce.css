@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  width: 20rem;
+  height: 2rem;
+  margin: auto;
+}
+.debounce {
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgb(150, 226, 28);
+  display: grid;
+  gap: 5px;
+}

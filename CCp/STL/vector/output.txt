@@ -1,0 +1,4 @@
+rect area: 40
+rectb area: 40
+rect area: 49
+rectb area: 49

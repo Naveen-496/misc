@@ -1,0 +1,78 @@
+.close-btn {
+  display: flex;
+  justify-content: end;
+}
+.close-btn img {
+  width: 2rem;
+  display: flex;
+  justify-content: end;
+  margin: 1rem;
+  cursor: pointer;
+}
+.browse-modal {
+  position: absolute;
+  z-index: 1;
+  width: 70%;
+  height: 100vh;
+  top: 5rem;
+  left: 3rem;
+  bottom: 2rem;
+  right: 2rem;
+  border: 1px solid white;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 95%;
+}
+
+.modal {
+  border: 1px solid gray;
+  border-right: 1px solid rgb(184, 121, 243);
+  width: 50%;
+  height: 100%;
+}
+
+.section-items {
+  padding: 3px;
+  margin: 2px;
+}
+.heading {
+  margin: 8px;
+}
+.section {
+  color: black;
+}
+
+button {
+  padding: 10px;
+  background-color: rgba(10, 213, 240, 0.925);
+  cursor: pointer;
+}
+
+.folder-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  gap: 25px;
+}
+
+.section-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+.modal input {
+  cursor: pointer;
+}
+.input-span {
+  display: flex;
+  padding: 4px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
